@@ -76,6 +76,7 @@ p {
   border-radius: 10px;
   border: none;
   margin-top: 10px;
+  color: #0d1b2a;
 }
 .modal-add {
   display: flex;
@@ -95,8 +96,8 @@ p {
 }
 .close-modal {
   position: absolute;
-  top: -3%;
-  right: 3%;
+  top: -5%;
+  right: 0%;
   font-size: 50px;
   color: #0d1b2a;
   cursor: pointer;
@@ -108,13 +109,7 @@ p {
   font-weight: bold;
   font-size: 1.1em;
 }
-.checkbox {
-  padding: 10px;
-  width: 30px;
-  height: 30px;
-  margin-top: 4px;
-  accent-color: white;
-}
+
 .hidden {
   display: none;
 }

@@ -36,7 +36,7 @@ addBook.addEventListener("click", hideModal);
 
 closeButton.addEventListener("click", hideModal);
 
-submitButton.addEventListener("click", () => {
+submitButton.addEventListener("click", function () {
   let nameValue = bookName.value;
   let authorValue = authorName.value;
   let pagesValue = noOfPages.value;
@@ -53,11 +53,10 @@ submitButton.addEventListener("click", () => {
       pages: pagesValue,
       read: readValue,
     };
-  } else {
+    push(booksInDatabase, bookObject);
+    clearFields();
+    hideModal();
   }
-  push(booksInDatabase, bookObject);
-  clearFields();
-  hideModal();
 });
 
 function clearFields() {
@@ -140,5 +139,5 @@ function addBooksToSection(book) {
     remove(keyOfItem);
   });
   //Appending the div element to the main section
-  section.appendChild(divElement);
+  section.append(divElement);
 }
