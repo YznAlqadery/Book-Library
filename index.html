@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <div class="head-div">
+        <h1>Book Library</h1>
+      </div>
+    </header>
+    <main>
+      <div>
+        <button class="add-book">+ Add Book</button>
+      </div>
+      <div class="modal-add hidden">
+        <button class="close-modal">&times;</button>
+        <h3>Add new book</h3>
+        <input type="text" id="book-name" placeholder="Book name" required />
+        <input
+          type="text"
+          id="author-name"
+          placeholder="Author name"
+          required
+        />
+        <input
+          type="number"
+          id="no-pages"
+          placeholder="Number of Pages"
+          required
+        />
+        <label>Did you read it?</label>
+        <input class="checkbox" type="checkbox" id="read-cb" />
+        <button class="submit">Submit</button>
+      </div>
+      <section class="books"></section>
+    </main>
+    <footer>
+      <div class="links">
+        <a href="https://www.instagram.com/yyazanalqaderi/">Instagram</a>
+        <a href="https://github.com/YznAlqadery">GitHub</a>
+      </div>
+      <p class="foot-p">&copy Yazan Alqadery. All rights reserved.</p>
+    </footer>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #284b63;
+  color: #d9d9d9;
+  font-family: "Dosis", sans-serif;
+}
+
+input:not(.checkbox) {
+  margin: 7px;
+  padding: 12px;
+  border-radius: 8px;
+  width: 250px;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.7em;
+}
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+button {
+  cursor: pointer;
+  display: block;
+  margin: 5px auto;
+  font-weight: bold;
+  font-family: inherit;
+}
+a {
+  color: #edf2f4;
+  text-decoration: none;
+}
+footer {
+  border-top: 5px solid #edf2f4;
+  margin-top: 20px;
+}
+p {
+  text-align: center;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 25px;
+}
+.head-div {
+  font-size: 1.15em;
+  width: 100%;
+  background-color: #3c6e71;
+  text-align: center;
+  padding: 4px 0px;
+  border-radius: 20px;
+  box-shadow: 2px 3px #000;
+}
+.add-book {
+  display: block;
+  margin: 25px auto;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 16px;
+  font-size: 1.5em;
+  border-radius: 16px;
+  transition: all ease 0.25s;
+}
+.submit {
+  width: 250px;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
+.modal-add {
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  width: 280px;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c6e71;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 50px 12px;
+  z-index: 10;
+}
+.close-modal {
+  position: absolute;
+  top: -3%;
+  right: 3%;
+  font-size: 50px;
+  color: #0d1b2a;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+::placeholder {
+  font-family: "Dosis", sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.checkbox {
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  margin-top: 4px;
+  accent-color: white;
+}
+.hidden {
+  display: none;
+}
+.add-book:hover {
+  background-color: #3c6e71;
+  opacity: 0.9;
+}
+.books {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.flex-div {
+  background-color: #d9d9d9;
+  color: #000;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+.delete-btn,
+.read-btn {
+  width: 200px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+}
+.green {
+  background-color: #6eeb83;
+}
+.red {
+  background-color: #ba181b;
+}
