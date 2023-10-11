@@ -67,6 +67,7 @@ function clearFields() {
 }
 function clearSection() {
   section.innerHTML = "";
+  divElement.innerHTML = "";
 }
 //For looping on the items on the database we pushed earlier/snapshot
 onValue(booksInDatabase, function (snapshot) {
@@ -79,12 +80,13 @@ onValue(booksInDatabase, function (snapshot) {
       addBooksToSection(currentBook);
     }
   } else {
+    clearSection();
     const paragraph = document.createElement("p");
     paragraph.textContent = "No Books in here..";
-    section.append(paragraph);
+    section.appendChild(paragraph);
   }
 });
-
+let divElement = document.createElement("div");
 function addBooksToSection(book) {
   let bookKey = book[0];
   let bookValue = book[1];
@@ -95,7 +97,6 @@ function addBooksToSection(book) {
   let hasRead = bookValue.read;
 
   //Creating elements so we can implement them on the web
-  let divElement = document.createElement("div");
   let h4Element1 = document.createElement("h4");
   let h4Element2 = document.createElement("h4");
   let h4Element3 = document.createElement("h4");

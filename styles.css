@@ -142,7 +142,15 @@ p {
 }
 .green {
   background-color: #6eeb83;
+  color: inherit;
 }
 .red {
   background-color: #ba181b;
+  color: inherit;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  accent-color: white;
 }
