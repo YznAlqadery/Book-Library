@@ -90,7 +90,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
-  padding: 50px 12px;
+  padding: 55px 12px;
   z-index: 10;
 }
 .close-modal {
@@ -147,9 +147,9 @@ p {
 }
 .green {
   background-color: #6eeb83;
-  color: inherit;
+  color: #0d1b2a;
 }
 .red {
   background-color: #ba181b;
-  color: inherit;
+  color: #0d1b2a;
 }
