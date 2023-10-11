@@ -109,8 +109,10 @@ function addBooksToSection(book) {
 
   if (hasRead) {
     readButton.classList.toggle("green");
+    readButton.textContent = "READ";
   } else {
     readButton.classList.toggle("red");
+    readButton.textContent = "NOT READ";
   }
   divElement.classList.add("flex-div");
   deleteButton.classList.add("delete-btn");
