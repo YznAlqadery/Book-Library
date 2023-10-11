@@ -76,6 +76,7 @@ p {
   border-radius: 10px;
   border: none;
   margin-top: 10px;
+  color: #0d1b2a;
 }
 .modal-add {
   display: flex;

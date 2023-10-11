@@ -115,7 +115,6 @@ function addBooksToSection(book) {
   divElement.classList.add("flex-div");
   deleteButton.classList.add("delete-btn");
   readButton.classList.add("read-btn");
-  readButton.textContent = "READ";
   deleteButton.textContent = "DELETE";
   //Appending the created elements
   divElement.append(
@@ -130,9 +129,11 @@ function addBooksToSection(book) {
     if (readButton.classList.contains("green")) {
       readButton.classList.remove("green");
       readButton.classList.add("red");
+      readButton.textContent = "NOT READ";
     } else {
       readButton.classList.add("green");
       readButton.classList.remove("red");
+      readButton.textContent = "READ";
     }
   });
   //Deleting the item by it's key on the database
