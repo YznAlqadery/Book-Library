@@ -36,7 +36,7 @@ addBook.addEventListener("click", hideModal);
 
 closeButton.addEventListener("click", hideModal);
 
-submitButton.addEventListener("click", function () {
+submitButton.addEventListener("click", () => {
   let nameValue = bookName.value;
   let authorValue = authorName.value;
   let pagesValue = noOfPages.value;
@@ -53,10 +53,11 @@ submitButton.addEventListener("click", function () {
       pages: pagesValue,
       read: readValue,
     };
-    push(booksInDatabase, bookObject);
-    clearFields();
-    hideModal();
+  } else {
   }
+  push(booksInDatabase, bookObject);
+  clearFields();
+  hideModal();
 });
 
 function clearFields() {
@@ -67,7 +68,6 @@ function clearFields() {
 }
 function clearSection() {
   section.innerHTML = "";
-  divElement.innerHTML = "";
 }
 //For looping on the items on the database we pushed earlier/snapshot
 onValue(booksInDatabase, function (snapshot) {
@@ -83,10 +83,10 @@ onValue(booksInDatabase, function (snapshot) {
     clearSection();
     const paragraph = document.createElement("p");
     paragraph.textContent = "No Books in here..";
-    section.appendChild(paragraph);
+    section.append(paragraph);
   }
 });
-let divElement = document.createElement("div");
+
 function addBooksToSection(book) {
   let bookKey = book[0];
   let bookValue = book[1];
@@ -97,6 +97,7 @@ function addBooksToSection(book) {
   let hasRead = bookValue.read;
 
   //Creating elements so we can implement them on the web
+  let divElement = document.createElement("div");
   let h4Element1 = document.createElement("h4");
   let h4Element2 = document.createElement("h4");
   let h4Element3 = document.createElement("h4");
@@ -140,5 +141,5 @@ function addBooksToSection(book) {
     remove(keyOfItem);
   });
   //Appending the div element to the main section
-  section.append(divElement);
+  section.appendChild(divElement);
 }
